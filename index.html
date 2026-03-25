@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zeqe Bellino | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio de Zeqe Bellino: desarrollo web full stack, proyectos destacados y formas de contacto."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#hero">ZB</a>
+        <nav class="nav">
+          <a href="#projects">Proyectos</a>
+          <a href="#about">Perfil</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Portfolio 2026</p>
+            <h1 id="hero-name"></h1>
+            <p class="hero-role" id="hero-role"></p>
+            <p class="hero-summary" id="hero-summary"></p>
+
+            <div class="hero-actions" id="hero-actions"></div>
+
+            <ul class="hero-metrics" id="hero-metrics"></ul>
+          </div>
+
+          <aside class="hero-panel">
+            <p class="panel-label">Stack principal</p>
+            <div class="tag-grid" id="stack-tags"></div>
+            <div class="panel-card">
+              <p class="panel-title">Lo que vas a encontrar acá</p>
+              <p class="panel-text">
+                Proyectos reales, enfoque de producto, desarrollo full stack y
+                una forma directa de contactarme para colaborar.
+              </p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section-heading">
+            <p class="eyebrow">Proyectos destacados</p>
+            <h2>Trabajo seleccionado</h2>
+            <p>
+              Una selección de proyectos para mostrar cómo convierto ideas en
+              productos funcionales y visualmente cuidados.
+            </p>
+          </div>
+          <div class="projects-grid" id="projects-grid"></div>
+        </section>
+
+        <section class="section section-alt" id="about">
+          <div class="section-heading">
+            <p class="eyebrow">Perfil</p>
+            <h2>Cómo trabajo</h2>
+          </div>
+          <div class="about-grid">
+            <article class="about-card">
+              <h3>Desarrollo con foco en producto</h3>
+              <p id="about-summary"></p>
+            </article>
+            <article class="about-card">
+              <h3>Fortalezas</h3>
+              <ul class="feature-list" id="strengths-list"></ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+          <div class="section-heading">
+            <p class="eyebrow">Contacto</p>
+            <h2>Links importantes</h2>
+            <p>
+              Si querés ver más trabajo, descargar mi CV o escribirme, acá está
+              todo centralizado.
+            </p>
+          </div>
+          <div class="contact-grid" id="contact-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
