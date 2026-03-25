@@ -1,15 +1,15 @@
 const siteData = {
   personal: {
-    name: "Zeqe Bellino",
-    role: "Desarrollador Full Stack enfocado en productos web claros, funcionales y con buena experiencia visual.",
+    name: "Ezequiel Bellino",
+    role: "Desarrollador Full Stack freelance con mirada creativa, foco en producto y experiencia construyendo software que resuelve operaciones reales.",
     summary:
-      "Construyo interfaces modernas y backends sólidos con foco en que cada proyecto sea útil, rápido y agradable de usar. Este portfolio reúne una selección de mis trabajos más importantes y la mejor forma de contactarme.",
+      "Diseño y desarrollo aplicaciones web con identidad visual, lógica de negocio sólida y una implementación pensada para usarse de verdad. Me interesa crear productos claros, ágiles y memorables para negocios que necesitan una solución concreta.",
     about:
-      "Trabajo entre frontend y backend con un enfoque práctico: entender el problema, resolverlo con tecnología adecuada y cuidar que la experiencia final se sienta profesional. Si querés personalizar el contenido, podés editar este archivo y reemplazar los textos y links por los definitivos.",
+      "Trabajo de punta a punta: idea, interfaz, backend, flujos internos y despliegue. Me gusta meterme en el detalle del negocio para que cada sistema no solo se vea bien, sino que también mejore la operatoria diaria. Mi perfil mezcla desarrollo, criterio visual y una forma de trabajar muy orientada a resultados concretos.",
     metrics: [
-      { value: "Full Stack", label: "React, FastAPI, Django, Flask" },
-      { value: "UI + UX", label: "Interfaces pensadas para verse bien y rendir" },
-      { value: "Remoto", label: "Disponible para colaborar desde Argentina" },
+      { value: "3 proyectos", label: "Productos reales y casos con foco operativo" },
+      { value: "Full Stack", label: "Frontend, backend y automatización" },
+      { value: "Freelance", label: "Disponible para proyectos remotos desde Argentina" },
     ],
     stack: [
       "React",
@@ -22,12 +22,15 @@ const siteData = {
       "PostgreSQL",
       "Tailwind",
       "Bootstrap",
+      "Streamlit",
+      "SQLite",
+      "Windows",
     ],
     strengths: [
-      "Transformar una idea en una experiencia web clara, usable y lista para mostrar.",
-      "Combinar backend y frontend para construir productos más completos y coherentes.",
-      "Mantener una estética moderna sin perder foco en rendimiento, accesibilidad y claridad.",
-      "Aprender rápido nuevas herramientas y sumar IA cuando aporta valor real al proyecto.",
+      "Traducir procesos de negocio en productos simples de usar y fáciles de mantener.",
+      "Combinar backend, frontend y automatización para resolver operaciones completas.",
+      "Diseñar interfaces con personalidad sin perder claridad, velocidad ni usabilidad.",
+      "Construir soluciones pensadas para el uso real del cliente, no solo para una demo linda.",
     ],
   },
   cta: {
@@ -44,36 +47,34 @@ const siteData = {
   },
   projects: [
     {
-      kicker: "Proyecto principal",
-      title: "Tu proyecto destacado 01",
+      kicker: "SaaS / gestión",
+      title: "MiniEspacio Gym",
       description:
-        "Reemplazá esta tarjeta por tu proyecto más fuerte. Sumá una descripción corta, el problema que resuelve y por qué vale la pena mostrarlo.",
-      stack: ["React", "FastAPI", "PostgreSQL"],
+        "Sistema de administración para gimnasio con seguimiento de rutinas y pagos, más generación de informes en PDF para enviar por WhatsApp a los clientes. El proyecto combina gestión interna, automatización y una interfaz pensada para el día a día del negocio.",
+      stack: ["React", "Python", "FastAPI", "PostgreSQL"],
       links: [
-        { label: "Demo", href: "#" },
-        { label: "Repositorio", href: "#" },
+        { label: "Sitio del cliente", href: "https://miniespacio.vercel.app/" },
+        { label: "Repositorio", href: "https://github.com/ezebellino/gym-app" },
       ],
     },
     {
-      kicker: "Producto web",
-      title: "Tu proyecto destacado 02",
+      kicker: "Desktop / operación local",
+      title: "WapaPizzaParty",
       description:
-        "Ideal para mostrar un sistema, dashboard o app con autenticación, paneles, integraciones o automatizaciones.",
-      stack: ["JavaScript", "Django", "Bootstrap"],
+        "Aplicación local para mostrador, cocina y seguimiento comercial de una pizzería, diseñada para funcionar en una sola PC del local. Hoy está orientada a la operatoria real: toma rápida de pedidos, comanda automática, avisos al cliente, editor interno de pizzas, tesorería con indicadores y arranque local para Windows.",
+      stack: ["Python", "Flask", "SQLite", "Bootstrap", "Windows"],
       links: [
-        { label: "Demo", href: "#" },
-        { label: "Caso", href: "#" },
+        { label: "Repositorio", href: "https://github.com/ezebellino/WapaPizzasParty" },
       ],
     },
     {
-      kicker: "Frontend + experiencia",
-      title: "Tu proyecto destacado 03",
+      kicker: "Data / visualización",
+      title: "Visualizador Porcentual de Telepase",
       description:
-        "Usá este espacio para una landing, e-commerce, portfolio de cliente o cualquier proyecto donde el diseño y la implementación tengan peso.",
-      stack: ["HTML", "CSS", "React"],
+        "Aplicación en Streamlit para analizar reportes de eventos Telepase, detectar lecturas correctas de TAG, identificar intervenciones manuales y filtrar la operación por vía, sentido, horario y patente. Una herramienta pensada para convertir datos operativos en decisiones más rápidas.",
+      stack: ["Python", "Streamlit", "Pandas", "Data Analysis"],
       links: [
-        { label: "Demo", href: "#" },
-        { label: "Repositorio", href: "#" },
+        { label: "Repositorio", href: "https://github.com/ezebellino/visualizador-telepase" },
       ],
     },
   ],
@@ -82,25 +83,34 @@ const siteData = {
       label: "LinkedIn",
       title: "Conectemos por LinkedIn",
       description:
-        "Reemplazá el link de ejemplo por tu perfil real para mostrar experiencia, recorrido y publicaciones.",
-      href: "",
-      action: "Agregar LinkedIn",
+        "Mi perfil profesional, experiencia y recorrido como desarrollador freelance y constructor de productos digitales.",
+      href: "https://www.linkedin.com/in/ezebellino/",
+      action: "Abrir LinkedIn",
     },
     {
       label: "GitHub",
       title: "Ver código y repositorios",
       description:
-        "Sumá tu usuario de GitHub para que puedan explorar proyectos, commits y tecnologías que manejás.",
-      href: "",
-      action: "Agregar GitHub",
+        "Repositorios, experimentos y proyectos donde se ve cómo resuelvo arquitectura, lógica y producto.",
+      href: "https://github.com/ezebellino/",
+      action: "Abrir GitHub",
     },
     {
-      label: "CV",
-      title: "Descargar CV",
+      label: "CV en español",
+      title: "Descargar CV ES",
       description:
-        "Dejá tu PDF en assets/cv/zeqe-bellino-cv.pdf y cambiá la URL para activar la descarga.",
-      href: "",
-      action: "Activar descarga",
+        "Versión en español para compartir experiencia, tecnologías y recorrido profesional.",
+      href: "./assets/cv/EzequielBellino_CV.pdf",
+      action: "Descargar CV ES",
+      download: true,
+    },
+    {
+      label: "CV in English",
+      title: "Download CV EN",
+      description:
+        "English version ready to send to international clients, teams or remote opportunities.",
+      href: "./assets/cv/CV-ENG-Eze.pdf",
+      action: "Download CV EN",
       download: true,
     },
   ],
@@ -200,8 +210,8 @@ const renderProjects = () => {
         createButton({
           label: link.label,
           href: link.href,
-          variant: link.href === "#" ? "button-secondary" : "button-ghost",
-          disabled: !link.href || link.href === "#",
+          variant: "button-ghost",
+          disabled: !link.href,
         }),
       );
     });
