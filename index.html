@@ -3,34 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zeqe Bellino | Portfolio</title>
+    <title>Zeqe.DEV | Full Stack Portfolio</title>
     <meta
       name="description"
       content="Portfolio de Zeqe Bellino: desarrollo web full stack, proyectos destacados y formas de contacto."
     />
+    <link rel="icon" type="image/png" href="./assets/zeqe-logo.png" />
+    <link rel="apple-touch-icon" href="./assets/zeqe-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+    <div class="language-transition" id="language-transition" aria-hidden="true">
+      <img src="./assets/zeqe-logo.png" alt="" />
+      <span id="language-transition-label">ENGLISH</span>
+    </div>
+
     <div class="page-shell">
       <header class="topbar">
-        <a class="brand" href="#hero">ZB</a>
+        <a class="brand" href="#hero">
+          <img class="brand-logo" src="./assets/zeqe-logo.png" alt="Logo de Zeqe.DEV" />
+          <span class="brand-text">Zeqe.DEV</span>
+        </a>
         <nav class="nav">
-          <a href="#projects">Proyectos</a>
-          <a href="#about">Perfil</a>
-          <a href="#contact">Contacto</a>
+          <a href="#projects" data-label="nav-projects">Proyectos</a>
+          <a href="#about" data-label="nav-about">Perfil</a>
+          <a href="#stack" data-label="nav-stack">Stack</a>
+          <a href="#contact" data-label="nav-contact">Contacto</a>
+          <div class="lang-toggle" aria-label="Selector de idioma">
+            <button type="button" data-lang="es" class="is-active">ES</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
         </nav>
       </header>
 
       <main>
         <section class="hero" id="hero">
           <div class="hero-copy">
-            <p class="eyebrow">Portfolio 2026</p>
+            <p class="eyebrow" data-label="hero-eyebrow">Portfolio 2026</p>
             <h1 id="hero-name"></h1>
             <p class="hero-role" id="hero-role"></p>
             <p class="hero-summary" id="hero-summary"></p>
@@ -41,11 +61,25 @@
           </div>
 
           <aside class="hero-panel">
-            <p class="panel-label">Stack principal</p>
+            <article class="profile-card">
+              <div class="profile-card-top">
+                <img class="profile-logo" src="./assets/zeqe-logo.png" alt="Logo Zeqe.DEV" />
+                <div>
+                  <p class="panel-label" data-label="brand-label">Alias / marca</p>
+                  <p class="profile-alias" id="brand-alias">Zeqe.DEV</p>
+                </div>
+              </div>
+              <img
+                class="profile-photo"
+                src="./assets/zeqe-photo.webp"
+                alt="Foto de Ezequiel Bellino"
+              />
+            </article>
+            <p class="panel-label" data-label="stack-panel">Stack principal</p>
             <div class="tag-grid" id="stack-tags"></div>
             <div class="panel-card">
-              <p class="panel-title">Lo que vas a encontrar acá</p>
-              <p class="panel-text">
+              <p class="panel-title" data-label="panel-title">Lo que vas a encontrar acá</p>
+              <p class="panel-text" data-label="panel-text">
                 Proyectos reales, enfoque de producto, desarrollo full stack y
                 una forma directa de contactarme para colaborar.
               </p>
@@ -55,38 +89,85 @@
 
         <section class="section" id="projects">
           <div class="section-heading">
-            <p class="eyebrow">Proyectos destacados</p>
-            <h2>Trabajo seleccionado</h2>
-            <p>
+            <p class="eyebrow" data-label="projects-eyebrow">Proyectos destacados</p>
+            <h2 data-label="projects-title">Trabajo seleccionado</h2>
+            <p data-label="projects-text">
               Una selección de proyectos para mostrar cómo convierto ideas en
               productos funcionales y visualmente cuidados.
             </p>
           </div>
+          <article class="spotlight-card">
+            <div class="spotlight-copy">
+              <p class="eyebrow" data-label="spotlight-label">Modo exploración</p>
+              <h3 data-label="spotlight-title">
+                Pasá el mouse por un proyecto y cambia el pulso del sitio
+              </h3>
+              <p data-label="spotlight-body">
+                Quise que esta sección se sintiera más viva que una grilla estática.
+              </p>
+            </div>
+            <div class="spotlight-preview">
+              <div class="spotlight-media">
+                <video
+                  id="spotlight-video"
+                  class="spotlight-video"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                ></video>
+              </div>
+              <span class="spotlight-kicker" id="spotlight-kicker"></span>
+              <h3 id="spotlight-project-title"></h3>
+              <p id="spotlight-project-body"></p>
+              <div class="spotlight-impact">
+                <strong data-label="spotlight-impact-title">Lo más interesante</strong>
+                <p id="spotlight-project-impact"></p>
+              </div>
+              <div class="project-links" id="spotlight-links"></div>
+              <p class="spotlight-hint" data-label="spotlight-hint">
+                Explorá las cards para ver otra versión del portfolio en acción.
+              </p>
+            </div>
+          </article>
           <div class="projects-grid" id="projects-grid"></div>
         </section>
 
         <section class="section section-alt" id="about">
           <div class="section-heading">
-            <p class="eyebrow">Perfil</p>
-            <h2>Cómo trabajo</h2>
+            <p class="eyebrow" data-label="about-eyebrow">Perfil</p>
+            <h2 data-label="about-title">Cómo trabajo</h2>
           </div>
           <div class="about-grid">
             <article class="about-card">
-              <h3>Desarrollo con foco en producto</h3>
+              <h3 data-label="about-card-title">Desarrollo con foco en producto</h3>
               <p id="about-summary"></p>
             </article>
             <article class="about-card">
-              <h3>Fortalezas</h3>
+              <h3 data-label="strengths-title">Fortalezas</h3>
               <ul class="feature-list" id="strengths-list"></ul>
             </article>
           </div>
         </section>
 
+        <section class="section" id="stack">
+          <div class="section-heading">
+            <p class="eyebrow" data-label="stack-eyebrow">Stack</p>
+            <h2 data-label="stack-title">Tecnologías con las que construyo</h2>
+            <p data-label="stack-text">
+              Herramientas que uso para crear productos web, automatizar flujos
+              y resolver operaciones reales con una base técnica sólida.
+            </p>
+          </div>
+          <div class="stack-groups" id="stack-groups"></div>
+        </section>
+
         <section class="section contact-section" id="contact">
           <div class="section-heading">
-            <p class="eyebrow">Contacto</p>
-            <h2>Links importantes</h2>
-            <p>
+            <p class="eyebrow" data-label="contact-eyebrow">Contacto</p>
+            <h2 data-label="contact-title">Links importantes</h2>
+            <p data-label="contact-text">
               Si querés ver más trabajo, descargar mi CV o escribirme, acá está
               todo centralizado.
             </p>
@@ -94,6 +175,27 @@
           <div class="contact-grid" id="contact-grid"></div>
         </section>
       </main>
+    </div>
+
+    <button class="assistant-bubble" id="assistant-bubble" type="button">
+      <span class="assistant-dot"></span>
+      <span data-label="assistant-bubble">Console</span>
+    </button>
+
+    <div class="assistant-panel is-hidden" id="assistant-panel">
+      <div class="assistant-header">
+        <p data-label="assistant-title">Asistente del portfolio</p>
+        <button class="assistant-close" id="assistant-close" type="button">×</button>
+      </div>
+      <div class="assistant-terminal">
+        <div class="assistant-terminal-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="assistant-messages" id="assistant-messages"></div>
+      </div>
+      <div class="assistant-choices" id="assistant-choices"></div>
     </div>
 
     <script src="./app.js"></script>
