@@ -493,6 +493,24 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.projects-subsection {
+  margin-top: 28px;
+}
+
+.section-heading-compact {
+  margin-bottom: 18px;
+}
+
+.section-heading-compact h3 {
+  margin: 0 0 10px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+
+.projects-grid-secondary {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .spotlight-card {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -873,6 +891,7 @@ a {
   .hero,
   .spotlight-card,
   .projects-grid,
+  .projects-grid-secondary,
   .about-grid,
   .contact-grid,
   .stack-groups {
