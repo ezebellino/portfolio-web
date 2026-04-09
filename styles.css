@@ -624,6 +624,21 @@ a {
   pointer-events: none;
 }
 
+.project-card-media {
+  margin: -24px -24px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.project-card-video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #050b14;
+}
+
 .project-card:hover,
 .project-card:focus-within {
   transform: translateY(-4px);
